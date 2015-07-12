@@ -1,0 +1,7 @@
+campaigns:
+    type:     rest
+    resource: KmeCnin\Bundle\FumbleManiaBundle\Controller\CampaignsController
+
+NelmioApiDocBundle:
+  resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
+  prefix:   /api/doc
