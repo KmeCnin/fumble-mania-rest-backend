@@ -2,10 +2,9 @@
 
 namespace KmeCnin\Component\Manager;
 
-final class CampaignManager implements ManagerInterface
-{
-    public function find() 
-    {
-        
-    }
+use KmeCnin\Bundle\FumbleManiaBundle\Repository\CampaignRepository;
+
+final class CampaignManager extends AbstractManager implements ManagerInterface
+{    
+    
 }

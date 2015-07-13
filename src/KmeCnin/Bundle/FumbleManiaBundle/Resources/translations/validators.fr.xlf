@@ -9,8 +9,12 @@
         original="file.ext">
         <body>
             <trans-unit id="1">
-                <source>default.label.title</source>
-                <target>Titre</target>
+                <source>assert.length.max_message</source>
+                <target>Limite maximum de caractères dépassée.</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>assert.not_blank.message</source>
+                <target>Ce champ ne doit pas être vide.</target>
             </trans-unit>
         </body>
     </file>
