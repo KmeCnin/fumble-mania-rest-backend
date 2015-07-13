@@ -8,7 +8,7 @@ namespace KmeCnin\Component\Model;
 class Campaign
 {
     /**
-     * @var integer
+     * @var int
      */
     private $id;
 
@@ -21,7 +21,7 @@ class Campaign
     /**
      * Get id.
      *
-     * @return integer 
+     * @return int 
      */
     public function getId()
     {

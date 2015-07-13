@@ -13,7 +13,6 @@ abstract class AbstractManager implements ManagerInterface
     protected $repository;
     
     /**
-     *
      * @var ObjectManager
      */
     protected $manager;

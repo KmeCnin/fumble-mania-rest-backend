@@ -66,9 +66,9 @@ class CampaignsController extends FOSRestController
      * 
      * @throws NotFoundHttpException when note not exist
      */
-    public function getCampaignAction(Campaign $campaign)
+    public function getCampaignAction(Campaign $id)
     {
-        return $this->view($campaign, 200);
+        return $this->view($id, 200);
     }
 
     /**
@@ -97,7 +97,7 @@ class CampaignsController extends FOSRestController
         if ($form->isValid()) {
             $this->getManager()->set($campaign);
 
-            return $this->redirect($this->generateUrl('get_campaign'), array('id' => $campaign->getId()));
+            return $this->getCampaignAction($campaign);
         }
 
         return $this->view(array('form' => $form), 400);
