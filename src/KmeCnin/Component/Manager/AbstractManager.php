@@ -29,6 +29,9 @@ abstract class AbstractManager implements ManagerInterface
      */
     public function get($id = null) 
     {
+        if (null !== $id) {
+            return $this->repository->find($id);
+        }
         return $this->repository->findAll();
     }
     

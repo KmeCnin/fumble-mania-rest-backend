@@ -30,7 +30,8 @@ class CampaignsController extends FOSRestController
 
     /**
      * List all campaigns.
-     * [GET] /campaigns
+     * HTTP  | [GET] /campaigns
+     * ROUTE | get_campaigns
      *
      * @ApiDoc(
      *   resource = true,
@@ -39,22 +40,41 @@ class CampaignsController extends FOSRestController
      *   }
      * )
      *
-     * @QueryParam(name="offset", requirements="\d+", nullable=true, description="Offset from which to start listing entries.")
-     * @QueryParam(name="limit", requirements="\d+", default="5", description="How many entries to return.")
-     *
-     * @param Request               $request      the request object
-     * @param ParamFetcherInterface $paramFetcher param fetcher service
-     *
      * @return array
      */
-    public function getCampaignsAction(Request $request, ParamFetcherInterface $paramFetcher)
+    public function getCampaignsAction()
     {
         return $this->view($this->getManager()->get(), 200);
     }
 
     /**
+     * Get one campaign from given id.
+     * HTTP  | [GET] /campaigns/{id}
+     * ROUTE | get_campaign
+     *
+     * @ApiDoc(
+     *   output = "KmeCnin\Bundle\FumbleManiaBundle\Entity\Campaign",
+     *   statusCodes = {
+     *     200 = "Returned when successful",
+     *     404 = "Returned when the note is not found"
+     *   }
+     * )
+     *
+     * @param int
+     *
+     * @return Campaign
+     * 
+     * @throws NotFoundHttpException when note not exist
+     */
+    public function getCampaignAction(Campaign $campaign)
+    {
+        return $this->view($campaign, 200);
+    }
+
+    /**
      * Creates a new campaign from the submitted data.
-     * [POST] /campaigns
+     * HTTP  | [POST] /campaigns
+     * ROUTE | post_campaigns
      *
      * @ApiDoc(
      *   resource = true,
@@ -77,17 +97,16 @@ class CampaignsController extends FOSRestController
         if ($form->isValid()) {
             $this->getManager()->set($campaign);
 
-            return $this->routeRedirectView('get_campaign', array('id' => $campaign->id));
+            return $this->redirect($this->generateUrl('get_campaign'), array('id' => $campaign->getId()));
         }
 
-        return $this->view(array(
-            'form' => $form
-        ), 200);
+        return $this->view(array('form' => $form), 400);
     }
 
     /**
      * Presents the form to use to create a new campaign.
-     * [GET] /campaigns/new
+     * HTTP  | [GET] /campaigns/new
+     * ROUTE | new_campaigns
      *
      * @ApiDoc(
      *   resource = true,
