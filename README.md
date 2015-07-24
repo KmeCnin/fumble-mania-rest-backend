@@ -1,6 +1,9 @@
-Fumble Mania Rest BackEnd
-========================
+# Fumble Mania Rest BackEnd
 
-Online role-playing games platform
+**The online role-playing games platform.**
 
-API Rest using Symfony2 for the Fumble Mania project
+API Rest using Symfony2 for the Fumble Mania project.
+
+See also other parts of the project:
+- [Fumble Mania Web FrontEnd]() using AngularJS
+- **Fumble Mania Mobile FrontEnd** (incoming)
