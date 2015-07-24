@@ -12,7 +12,7 @@ security:
 
     providers:
         fos_userbundle:
-            id: fos_user.user_provider.username
+            id: fos_user.user_provider.username_email
 
     firewalls:
         dev:
@@ -37,5 +37,6 @@ security:
             stateless:  true
                 
     access_control:
-        - { path: ^/oauth/v2/auth_login, roles: [ IS_AUTHENTICATED_ANONYMOUSLY ] }
+        - { path: ^/oauth/v2/auth_login$, roles: [ IS_AUTHENTICATED_ANONYMOUSLY ] }
+        - { path: ^/login$, roles: [ IS_AUTHENTICATED_ANONYMOUSLY ] }
         - { path: ^/, roles: [ IS_AUTHENTICATED_FULLY ] }

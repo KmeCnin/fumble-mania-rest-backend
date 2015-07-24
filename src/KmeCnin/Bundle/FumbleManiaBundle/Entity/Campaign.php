@@ -9,8 +9,8 @@ use KmeCnin\Component\Model\Campaign as BaseCampaign;
 /**
  * Campaign.
  *
- * @ORM\Table()
  * @ORM\Entity(repositoryClass="KmeCnin\Bundle\FumbleManiaBundle\Repository\CampaignRepository")
+ * @ORM\Table(name="campaign")
  */
 class Campaign extends BaseCampaign
 {

@@ -1,6 +1,8 @@
 campaigns:
     type:     rest
     resource: KmeCnin\Bundle\FumbleManiaBundle\Controller\CampaignsController
+    options:
+        expose: true
 
 NelmioApiDocBundle:
     resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
