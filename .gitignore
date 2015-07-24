@@ -6,4 +6,5 @@
 /bin/
 /composer.phar
 /nbproject
-.travis.yml
+/.travis.yml
+/app/config/parameters.yml
