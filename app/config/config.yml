@@ -116,12 +116,3 @@ fos_user:
     db_driver: orm
     firewall_name: main
     user_class: KmeCnin\Bundle\FumbleManiaBundle\Entity\User
-    
-fos_oauth_server:
-    db_driver: orm
-    client_class:        KmeCnin\Bundle\FumbleManiaBundle\Entity\Client
-    access_token_class:  KmeCnin\Bundle\FumbleManiaBundle\Entity\AccessToken
-    refresh_token_class: KmeCnin\Bundle\FumbleManiaBundle\Entity\RefreshToken
-    auth_code_class:     KmeCnin\Bundle\FumbleManiaBundle\Entity\AuthCode
-    service:
-        user_provider: fos_user.user_manager

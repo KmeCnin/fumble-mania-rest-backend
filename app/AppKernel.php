@@ -22,7 +22,6 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new FOS\RestBundle\FOSRestBundle(),
             new FOS\HttpCacheBundle\FOSHttpCacheBundle(),
-            new FOS\OAuthServerBundle\FOSOAuthServerBundle(),
             new Nelmio\ApiDocBundle\NelmioApiDocBundle(),
             new Bazinga\Bundle\HateoasBundle\BazingaHateoasBundle(),
             new Bazinga\Bundle\RestExtraBundle\BazingaRestExtraBundle(),

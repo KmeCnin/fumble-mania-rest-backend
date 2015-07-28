@@ -1,19 +1,11 @@
 campaigns:
     type:     rest
     resource: KmeCnin\Bundle\FumbleManiaBundle\Controller\CampaignsController
-    options:
-        expose: true
 
 NelmioApiDocBundle:
     resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
     prefix:   /api/doc
-  
-fos_oauth_server_token:
-    resource: "@FOSOAuthServerBundle/Resources/config/routing/token.xml"
 
-fos_oauth_server_authorize:
-    resource: "@FOSOAuthServerBundle/Resources/config/routing/authorize.xml"
-    
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"
 
@@ -32,11 +24,3 @@ fos_user_resetting:
 fos_user_change_password:
     resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
     prefix: /profile
-    
-kmecnin_oauth_server_auth_login:
-    pattern:  /oauth/v2/auth_login
-    defaults: { _controller: KmeCninFumbleManiaBundle:Security:login }
-
-kmecnin_oauth_server_auth_login_check:
-    pattern:  /oauth/v2/auth_login_check
-    defaults: { _controller: KmeCninFumbleManiaBundle:Security:loginCheck }
