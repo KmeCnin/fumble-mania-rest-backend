@@ -22,7 +22,6 @@ class Campaign extends BaseCampaign
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
-
     
     /**
      * @{inheritdoc}
