@@ -7,7 +7,7 @@ DirectoryIndex app.php
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
-    RewriteCond %{HTTP:Authorization} ^(.)
+    RewriteCond %{HTTP:Authorization} ^(.*)
     RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]
 
     # Redirect to URI without front controller to prevent duplicate content
