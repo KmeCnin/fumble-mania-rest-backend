@@ -29,6 +29,28 @@ class UsersController extends FOSRestController
     }
 
     /**
+     * Get the user currently authenticated.
+     * HTTP  | [GET] /self
+     * ROUTE | get_self
+     *
+     * @ApiDoc(
+     *   output = "KmeCnin\Bundle\FumbleManiaBundle\Entity\User",
+     *   statusCodes = {
+     *     200 = "Returned when successful",
+     *     404 = "Returned when the user is not found"
+     *   }
+     * )
+     *
+     * @return User
+     * 
+     * @throws NotFoundHttpException when user not exist
+     */
+    public function getSelfAction()
+    {
+        return $this->view($this->get('security.context')->getToken()->getUser(), 200);
+    }
+
+    /**
      * Get one user from given id.
      * HTTP  | [GET] /users/{id}
      * ROUTE | get_user
