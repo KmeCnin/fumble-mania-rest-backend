@@ -56,7 +56,7 @@ class CampaignsController extends FOSRestController
      *   output = "KmeCnin\Bundle\FumbleManiaBundle\Entity\Campaign",
      *   statusCodes = {
      *     200 = "Returned when successful",
-     *     404 = "Returned when the note is not found"
+     *     404 = "Returned when the campaign is not found"
      *   }
      * )
      *
@@ -64,7 +64,7 @@ class CampaignsController extends FOSRestController
      *
      * @return Campaign
      * 
-     * @throws NotFoundHttpException when note not exist
+     * @throws NotFoundHttpException when campaign not exist
      */
     public function getCampaignAction(Campaign $id)
     {

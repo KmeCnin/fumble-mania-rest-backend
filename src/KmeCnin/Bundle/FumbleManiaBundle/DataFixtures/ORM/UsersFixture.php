@@ -34,6 +34,9 @@ class UsersFixture extends AbstractFixture implements OrderedFixtureInterface, C
         $userTest = $userManager->createUser();
         $userTest
             ->setUsername('pierrechanel.gauthier@gmail.com')
+            ->setFirstName('Pierre-Chanel')
+            ->setLastName('Gauthier')
+            ->setUsername('pierrechanel.gauthier@gmail.com')
             ->setPlainPassword('test')
             ->setEmail('pierrechanel.gauthier@gmail.com')
             ->setEnabled(true);

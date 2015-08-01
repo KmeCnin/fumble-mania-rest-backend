@@ -2,6 +2,10 @@ campaigns:
     type:     rest
     prefix:   /api
     resource: KmeCnin\Bundle\FumbleManiaBundle\Controller\CampaignsController
+users:
+    type:     rest
+    prefix:   /api
+    resource: KmeCnin\Bundle\FumbleManiaBundle\Controller\UsersController
 
 NelmioApiDocBundle:
     resource: "@NelmioApiDocBundle/Resources/config/routing.yml"

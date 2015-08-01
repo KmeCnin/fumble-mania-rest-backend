@@ -1,4 +1,5 @@
 services:
+    
     campaign_repository:
         class: Doctrine\ORM\EntityRepository
         factory_service: doctrine.orm.default_entity_manager
@@ -8,3 +9,13 @@ services:
     campaign_manager:
         class:      KmeCnin\Component\Manager\CampaignManager
         arguments:  ["@campaign_repository", "@doctrine.orm.entity_manager"]
+        
+    user_repository:
+        class: Doctrine\ORM\EntityRepository
+        factory_service: doctrine.orm.default_entity_manager
+        factory_method: getRepository
+        arguments:
+            - KmeCnin\Bundle\FumbleManiaBundle\Entity\User
+    user_manager:
+        class:      KmeCnin\Component\Manager\UserManager
+        arguments:  ["@user_repository", "@fos_user.user_manager"]

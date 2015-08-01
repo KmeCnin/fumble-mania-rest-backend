@@ -7,6 +7,8 @@ DirectoryIndex app.php
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
+    # Do not ignore invalides headers types.
+    # Usefull for JSON Web Tokens and Bearer authentification.
     RewriteCond %{HTTP:Authorization} ^(.*)
     RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]
 
