@@ -1,3 +1,7 @@
+jwt:
+    type:     rest
+    prefix:   /api
+    resource: KmeCnin\Bundle\FumbleManiaBundle\Controller\JwtController
 campaigns:
     type:     rest
     prefix:   /api
