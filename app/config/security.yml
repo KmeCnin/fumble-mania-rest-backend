@@ -32,10 +32,10 @@ security:
             stateless: true
             lexik_jwt:
                 authorization_header: # check token in Authorization Header
-                    enabled: true
+                    enabled: %jwt_enable_authorization_header%
                     prefix:  Bearer
                 query_parameter:      # check token in query string parameter
-                     enabled: false
+                     enabled: %jwt_enable_query_parameter%
                      name:    bearer
         main:
             pattern: ^/
