@@ -10,7 +10,7 @@ parameters:
     mailer_user: null
     mailer_password: null
     locale: fr
-    secret: ecef027224d9227614bb98841054823a5
+    secret: ThisIsASecret
     database_path: null
     jwt_private_key_path: %kernel.root_dir%/var/jwt/private.pem   # ssh private key path
     jwt_public_key_path:  %kernel.root_dir%/var/jwt/public.pem    # ssh public key path
